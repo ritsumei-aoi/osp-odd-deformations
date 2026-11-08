@@ -1,0 +1,28 @@
+name = "OspOddDeformations"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["OspOddDeformations"]
+# Lean v4.35: mathlib is marked for the module system; these files are not modules.
+allowNonModules = true
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+maxSynthPendingDepth = 3
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.35.0"
+
+# Twelve modules of the formalization of the case N = 1 (osp-triviality), copied; see
+# InhomogeneousDeformations/PROVENANCE.md. Built with that repository's own options.
+[[lean_lib]]
+name = "InhomogeneousDeformations"
+globs = ["InhomogeneousDeformations.+"]
+leanOptions = { weak.linter.style.header = false }
+
+[[lean_lib]]
+name = "OspOddDeformations"
+globs = ["OspOddDeformations.Bmn.+", "OspOddDeformations.OspN.+", "OspOddDeformations.General.+"]

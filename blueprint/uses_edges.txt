@@ -1,0 +1,37 @@
+# node -> node used by its proof (a \ref/\eqref in the proof environment; an equation label
+# counts as the node whose statement environment contains it)
+prop:osp -> lem:base
+thm:recovery -> prop:lift-change
+thm:recovery -> lem:base
+thm:unique -> thm:recovery
+thm:unique -> prop:lift-change
+thm:unique -> prop:independence
+prop:gamma -> lem:base
+prop:gamma -> prop:lift-change
+thm:triv-single -> thm:recovery
+thm:fbeta -> lem:inner
+thm:fbeta -> lem:base
+cor:tbeta -> thm:triv-single
+thm:all-primitives -> prop:osp
+thm:all-primitives -> lem:inner
+thm:all-primitives -> lem:base
+cor:normalization -> thm:all-primitives
+cor:complex -> thm:fbeta
+cor:complex -> cor:tbeta
+thm:untwist-multi -> lem:untwist
+prop:lift-change-multi -> prop:lift-change
+thm:multi -> prop:lift-change-multi
+thm:multi -> prop:independence
+thm:multi -> thm:triv-single
+thm:multi -> lem:base
+thm:multi -> thm:recovery
+prop:factor -> thm:untwist-multi
+prop:factor -> lem:base
+prop:factor -> prop:lift-change-multi
+prop:factor -> thm:multi
+prop:not-additive -> thm:multi
+prop:not-additive -> prop:factor
+prop:not-additive -> prop:gamma
+prop:not-additive -> lem:base
+# added by the node map (not from a proof environment):
+after_prop_factor -> prop:factor  (added)
