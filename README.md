@@ -2,7 +2,10 @@
 
 This repository holds the Lean 4 formalization that accompanies the paper
 
-> Hisashi Aoi, *Inhomogeneous deformations of osp(N|2n): triviality for any number of odd parameters*.
+> Hisashi Aoi, *Inhomogeneous deformations of osp(N|2n): triviality for any number of odd parameters*,
+> arXiv:2611.11153 [math.RT], 2026. \[[arXiv](https://arxiv.org/abs/2611.11153)\]
+
+The state that the paper describes is the tag `v1.0`.
 
 The paper's Appendix A states what is formalized and what is not, and lists the declarations; this file
 summarizes it. The formalization covers **every `N ≥ 1` and `n ≥ 1`**, and the statements of the
